@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* * {
+    box-sizing: border-box;
+} */
+
+/* THIS DOES HALF OF THE WORK FOR MAKING AN IMG RESPONSIVE */
+img {
+    max-width: 100%;
+}
+
+/* THIS HELPS THE WHOLE HTML FILE TAKE THE SPACE OF THE ENTIRE BROWSER WINDOW */
+html {
+    height: 100%;
+    font-size: 1.2em;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+}
+
+/* ASK ABOUT MIN/MAX WIDTH IN THE MEDIA QUERIES */
+
+h1 a {
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: #333;
+}
+
+hr {
+    color: #d0d0d0;
+}
+
+h2 a {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #333;
+    text-decoration: none;
+}
+
+
+nav ul li {
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+
+nav ul li a:active {
+    color: #DEB887;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #00ddff;
+    text-decoration: none;
+
+}
+
+.post-date {
+    text-align: right;
+}
+
+
+
+@media screen and (min-width: 550px) {
+    h1 a {
+        color: #666;
+    }
+
+    nav ul li {
+        display: inline;
+        padding: 10px;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    article .post-date {
+        grid-column: 1;
+        grid-row: 1;
+        padding-right: 20px;
+
+    }
+
+    article .post-content {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .post-date {
+        border-right: #d0d0d0;
+    }
+}
