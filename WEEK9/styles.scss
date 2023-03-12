@@ -1,0 +1,113 @@
+@import 'typography';
+@import 'icons';
+@use 'variables' as *;
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+figcaption {
+  color: #307294;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+header .site-banner{
+  background-color: $byui-blue;
+  display: flex;
+  flex-direction: row;
+  // display: inline;
+  &__icon-byui-logo {
+    background-color: #020202;
+  }
+}
+
+.icon-search .text-white .mobile-header-icon {
+  background-color: $light-gray;
+}
+
+body {
+  width: 380px;
+}
+
+
+.get-info-box {
+  width: clamp(380px, 300px, 500px);
+  &__label{
+    display: block;
+    text-align: center;
+    background-color: $med-gray;
+    text-transform: uppercase;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid $dark-gray;
+    cursor: pointer;}
+    &__toggle{
+      display: none;
+    }
+    &__list {
+      display: none;
+      opacity: 0;
+      transition: all .3s;
+    }
+    &__toggle:checked + &__list{
+      display: block;
+      opacity: 1;
+    }
+    &__icon-triangle-down {
+      justify-content: right;
+    }
+    &__li__a {
+      list-style-type: none;
+    }
+    &__resources-box {
+      color: #00A2D9;
+    }
+  }
+
+  .newsroom-section {
+    width: clamp(380px, 300px, 500px);
+    &__newsroom-section__img {
+      visibility: hidden;
+    }
+    
+  }
+
+.event {
+  width: clamp(380px, 300px, 500px);
+  &__event-name {
+    color: #0076b6;
+  }
+}
+
+button {
+  background-color: #056cb6;
+  color: white;
+  padding: 2.5%;
+  align-self: end;
+}

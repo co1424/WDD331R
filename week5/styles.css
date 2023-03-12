@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.row-grid {
+    width: auto;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.col-grid {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 400px;
+    align-content: center;
+}
+
+.card {
+    max-width: 450px;
+    flex: 1 0 auto;
+    /*Grow (if there is extra space, can I grow?), shrink, basis (original size)  */
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+
+img {
+    width: 100%;
+}
